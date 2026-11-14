@@ -235,6 +235,30 @@ distribuição ou modificação do conteúdo.
 LINK DO PROJETO
 https://cy6xekivtg5ev4qybylfamxt7.bolt.host/
 
+## Protótipo web local
+
+Além do protótipo publicado acima, este repositório inclui uma versão navegável em React, TypeScript e Vite, com Dashboard, Histórico, Alertas e Configurações. Os dados são fictícios; configurações e mudanças de status dos alertas ficam no `localStorage` do navegador. Não há medidor, login, API ou backend integrado nesta etapa.
+
+### Executar
+
+Requisitos: Node.js 20 ou superior e npm.
+
+```bash
+npm install
+npm run dev
+```
+
+Para validar a versão de produção, execute `npm run build` e, em seguida, `npm run preview`.
+
+### Organização do código
+
+- `src/domain.ts`: tipos de domínio e contrato `MonitoringRepository`.
+- `src/data/demoData.ts`: leituras, alertas e configurações fictícios.
+- `src/services/demoRepository.ts`: repositório local de demonstração.
+- `src/App.tsx`: navegação e telas do protótipo.
+- `src/styles.css`: identidade visual e layout responsivo.
+
+O contrato do repositório permite substituir os dados locais por uma API posteriormente, mantendo a camada de interface separada da persistência.
 
 
 
